@@ -2,6 +2,30 @@
 
 This repository contains the instructions & code to construct structural connectivity matrices and calculate network controllability and covers the analyses in the follwoing manuscript: ***
 
-# Structural Imaging & Parcellation
+# Image Processing
 
-The structural imaging (3T T1 MPRAGE sequences) were organised in [BIDS](https://bids.neuroimaging.io) format and fed through [Connectome Mapper 3](https://connectome-mapper-3.readthedocs.io/en/latest/). We chose the Lausanne Atlas at Scale 3 for this study, although 
+## Structural Imaging & Parcellation
+
+The structural imaging (3T T1 MPRAGE sequences) were organised in [BIDS](https://bids.neuroimaging.io) format and fed through [Connectome Mapper 3](https://connectome-mapper-3.readthedocs.io/en/latest/). We chose the Lausanne Atlas at Scale 3 for this study. 
+
+## Diffusion Imaging Preprocessing
+
+Multi-shell multi-tissue diffusion imaging was preprocessed using standard preprocessing steps according to the script **diffusion_preproc.sh**. The multi-shell multi-tissue dicom files were stored in a folder called 'dwi' and the negative phase encoded series in a folder called 'negPE'. All tools were [mrtrix](https://mrtrix.readthedocs.io/en/latest/) in line with their recommended steps. 
+
+## Constructing the Connectome
+
+This was done by combining the parcellation scheme with the preprocessed diffusion imaging according to the script **make_connectome.sh**. Firstly the structural data was registered to diffusion space and the cortical target labels were amended according to **Scale3_NewLabels.txt**. For this, we fused the hippocampal subparcels into a single label, resulting in 253 cortical, subcortical and brainstem parcels per subject. The connectome used anatomically constrained tractography and the SIFT2 filtering step. The output is a 253x253 weighted, undirected structural connectivity matrix in .csv format.
+
+# Connectome Analyses
+
+## Organising Data
+
+The extracted connectomes were assembled as structures in matlab using the scripts **ExtractConnectomes.m** and **LoadConnectomes.m**. Following this, the weighted degree, average and modal controllabilities for each node in each patient were calculated using the script **CalculateControllabilities.m**. These final data files with the connectivity matrices and controllabilities for each subject is avaiable within each group folder (Controls, Patients and VNS).
+
+## Main Analyses
+
+The main analyses are encompassed by the file **MainAnalyses.m**. This file calculates the ranks, correlation coefficients (WD-AC, WD-MC and AC-MC), Z-scores etc that encompass all the patient data analysis elements of the manuscript. The **GraphTheory.m** file contains the script that calcualtes the graph theory metrics and requires the [BrainConnectivityToolbox](https://sites.google.com/site/bctnet/) to be installed. 
+
+# Modelling and Simulation
+
+The modelling elements are contained in the folder
