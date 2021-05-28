@@ -24,7 +24,7 @@ The extracted connectomes were assembled as structures in matlab using the scrip
 
 ## Main Analyses
 
-The main analyses are encompassed by the file **MainAnalyses.m**. This file calculates the ranks, correlation coefficients (WD-AC, WD-MC and AC-MC), Z-scores etc that encompass all the patient data analysis elements of the manuscript. The **GraphTheory.m** file contains the script that calcualtes the graph theory metrics and requires the [BrainConnectivityToolbox](https://sites.google.com/site/bctnet/) to be installed. 
+The main analyses are encompassed by the file **MainAnalyses.m**. This file calculates the ranks, correlation coefficients (WD-AC, WD-MC and AC-MC), Z-scores etc that encompass all the patient data analysis elements of the manuscript. The **GraphTheory.m** file follows on from this and contains the script that calcualtes the graph theory metrics. It requires the [BrainConnectivityToolbox](https://sites.google.com/site/bctnet/) to be installed. 
 
 # Modelling and Simulation
 
