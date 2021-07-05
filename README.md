@@ -22,7 +22,7 @@ This was done by combining the parcellation scheme with the preprocessed diffusi
 
 ## Organising Data
 
-The extracted connectomes were assembled as structures in Matlab v2020b using the scripts **ExtractConnectomes.m** and **LoadConnectomes.m**. Following this, the weighted degree, average and modal controllabilities for each node in each patient were calculated using the script **CalculateControllabilities.m**. These final data files with the connectivity matrices and controllabilities for each subject is avaiable within each group folder (Controls, Patients and VNS).
+The extracted connectomes were assembled as structures in Matlab v2020b using the scripts **ExtractConnectomes.m** and **LoadConnectomes.m**. Following this, the weighted degree, average and modal controllabilities for each node in each patient were calculated using the script **CalculateControllabilities.m**. These final data files with the connectivity matrices and controllabilities for each subject is avaiable within each group folder (Controls, Patients, PostopPatients and VNS).
 
 ## Main Analyses
 
