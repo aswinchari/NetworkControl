@@ -1,6 +1,8 @@
 # Network Controllability in Paediatric Drug Resistant Epilepsy
 
-This repository contains the instructions & code to construct structural connectivity matrices and calculate network controllability and covers the analyses in the follwoing manuscript: ***
+This repository contains the instructions & code to construct structural connectivity matrices and calculate network controllability and covers the analyses in the follwoing manuscript:
+
+*Drug-resistant focal epilepsy in children is associated with increased modal controllability of the whole brain and epileptogenic regions* by Chari et al. 
 
 # Image Processing
 
