@@ -20,12 +20,14 @@ This was done by combining the parcellation scheme with the preprocessed diffusi
 
 ## Organising Data
 
-The extracted connectomes were assembled as structures in matlab using the scripts **ExtractConnectomes.m** and **LoadConnectomes.m**. Following this, the weighted degree, average and modal controllabilities for each node in each patient were calculated using the script **CalculateControllabilities.m**. These final data files with the connectivity matrices and controllabilities for each subject is avaiable within each group folder (Controls, Patients and VNS).
+The extracted connectomes were assembled as structures in Matlab v2020b using the scripts **ExtractConnectomes.m** and **LoadConnectomes.m**. Following this, the weighted degree, average and modal controllabilities for each node in each patient were calculated using the script **CalculateControllabilities.m**. These final data files with the connectivity matrices and controllabilities for each subject is avaiable within each group folder (Controls, Patients and VNS).
 
 ## Main Analyses
 
 The main analyses are encompassed by the file **MainAnalyses.m**. This file calculates the ranks, correlation coefficients (WD-AC, WD-MC and AC-MC), Z-scores etc that encompass all the patient data analysis elements of the manuscript. The **GraphTheory.m** file follows on from this and contains the script that calcualtes the graph theory metrics. It requires the [BrainConnectivityToolbox](https://sites.google.com/site/bctnet/) to be installed. 
 
+GLMs were conducted by manually exporting the data to SPSS v24. 
+
 # Modelling and Simulation
 
-The modelling elements are contained in the folder
+The modelling elements are contained in the folder **Modelling**. The code for first modelling exercise, adding random edges to the controls, is contained in **ModellingEx1.m**. The code for the second modelling exercise of adding low edge weights to thalamocortical edges is contained in **ModellingEx2.m**. 
