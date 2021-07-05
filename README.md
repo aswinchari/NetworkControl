@@ -31,3 +31,7 @@ GLMs were conducted by manually exporting the data to SPSS v24.
 # Modelling and Simulation
 
 The modelling elements are contained in the folder **Modelling**. The code for first modelling exercise, adding random edges to the controls, is contained in **ModellingEx1.m**. The code for the second modelling exercise of adding low edge weights to thalamocortical edges is contained in **ModellingEx2.m**. 
+
+# Visualisation
+
+Elements required for visualising the atlas are contained in the folder **SurfIce** and requires dowloading [SurfIce](https://www.nitrc.org/projects/surfice/) and the [AtlasStatMap](https://github.com/rordenlab/spmScripts/blob/master/AtlasStatMap.m) function. The folder also contains a version of the atlas in paediatric template brain space (FinalPaedBrainLausanne.nii) and SurfIce mz3 format (merge.mz3). For more information, please see the [SurfIce Wiki on viewing atlases](https://www.nitrc.org/plugins/mwiki/index.php/surfice:MainPage#Atlas-based_Region_of_interest_Analyses). 
